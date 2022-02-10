@@ -1,0 +1,20 @@
+{
+  "name": "mwc",
+  "version": "1.0.0",
+  "description": "MWC 2022 CLI",
+  "main": "index.js",
+  "bin": {
+    "mwc": "app/bin/mwc.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Ocana Alvarez",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.0",
+    "mongoose": "^6.2.1"
+  }
+}
