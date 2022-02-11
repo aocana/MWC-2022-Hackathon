@@ -6,8 +6,8 @@ Reto que consistía en crear una CLI para obtener información relativa al event
 
 ### Prerequisites
 
+- [NodeJs](https://nodejs.dev/)
 - [Docker](https://docs.docker.com/desktop)
-- [NodeJ](https://nodejs.dev/)s
 - [Docker Compose](https://docs.docker.com/compose/)
 
 ### Installation
@@ -15,7 +15,9 @@ Reto que consistía en crear una CLI para obtener información relativa al event
 Clone this repository
 
 ```
-git clone url
+git clone https://github.com/ocania/MWC-2022-Hackathon
+```
+```
 npm install
 docker-compose up -d
 ```
@@ -26,5 +28,10 @@ docker-compose up -d
 
 - NodeJs
 - MongoDB
+
+### Packages
+- Mongoose
+- Commander
+- Inquirer
 
 He escogido estas dos tecnologías debido a que se proponía NodeJs en el reto y además, y su razón de mas peso: no había trabajado con ellas anteriormente, ha sido todo un reto.
