@@ -39,6 +39,7 @@ const addDeveloper = () => {
             // if email not exists add dev to database
             const newDev = await Developer.create(developer);
             console.log(`Developer ${newDev.name} added on ${newDev.date}`);
+            process.exit();
         })
     } catch (error) {
         console.error(error);
