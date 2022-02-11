@@ -3,6 +3,7 @@ version: '3.8'
 services:
   mongodb:
     container_name: mongodb
+    restart: unless-stopped
     image: mongo:4.4.12
     ports:
       - "27017:27017"

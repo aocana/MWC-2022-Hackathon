@@ -13,13 +13,17 @@ Reto que consistía en crear una CLI para obtener información relativa al event
 ### Installation
 
 Clone this repository
-
 ```
 git clone https://github.com/ocania/MWC-2022-Hackathon
 ```
+
+Install dependencies
 ```
 npm install
-docker-compose up -d
+```
+Execute script.sh.
+```
+./script.sh
 ```
 
 # Usage
