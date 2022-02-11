@@ -1,51 +1,49 @@
-const db = require('../config/database')
-const {prompt} = require('inquirer');
-const Developer = require('../models/developer'); // import model
+const {prompt} = require('inquirer');  //import prompt from inquirer
+const db = require('../config/database')  //import database connection
+const Developer = require('../models/developer');  // import model
+const addDevQuestions = require('../lib/devPromptQuestions.js')  // import dev questions
 
 // get all developers
 const getAllDevelopers = async () => {
     try {
-        const devs = await Developer.find({}, {name: 1, category: 1, date: 1, _id: 0});
+        //show all devs order by date
+        const devs = await Developer.find({}, {name: 1, category: 1, date: 1, _id: 0}).sort({date: 1});
+
+        //show dev info
         devs.forEach(dev => {
-            console.log(`${Date(dev.date)},${dev.category}, ${dev.name} `)
+            console.log(`${dev.date } - ${dev.category} - ${dev.name}`)
         })
+
         console.log(`\n${devs.length} developers registered`)
     } catch (error) {
-        console.log(error);
+        console.error(error);
     } finally {
         process.exit();
     }
 }
 
-//get developer by Id
-const getDeveloperById = async (developerId) => {
-    try {
-        const developer = await Developer.find(developerId);
-        console.log(developer)
-    } catch (error) {
-        console.log(error);
-    }
-}
 
-//add developer to
+//add developer
 const addDeveloper = () => {
     try {
-        prompt([
-            {
-                name: 'name',
-                type: 'string',
-                message: 'Write name'
-            },
-        ]).then(async developer => {
-                //const newDev = await Developer.create(developer);
-                console.log(`New Developer ${developer.name} added`);
+        prompt(addDevQuestions).then(async developer => {
+            const email = developer.email
+            // search this email on database
+            const exists = await Developer.findOne({email})
+
+            if (exists){
+                //show message and exit
+                console.log(`\nOne developer haves this email, not added, try again.`)
                 process.exit()
             }
-        )
+            // if email not exists add dev to database
+            const newDev = await Developer.create(developer);
+            console.log(`Developer ${newDev.name} added on ${newDev.date}`);
+        })
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
 
-module.exports = {getAllDevelopers, getDeveloperById, addDeveloper};
+module.exports = {getAllDevelopers, addDeveloper};

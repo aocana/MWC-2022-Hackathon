@@ -22,19 +22,10 @@ const DeveloperSchema = new Schema({
         unique: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     }
 })
 
-DeveloperSchema.methods.devsList = async () => {
-    try{
-        const devs = await Developer.find({}, {name: 1, category: 1, date: 1, _id: 0});
-        console.log(devs)
-        console.log(`${devs.length} developers`)
-    } catch (err){
-        console.log(err)
-    }
-}
 
 module.exports = mongoose.model('Developer', DeveloperSchema);

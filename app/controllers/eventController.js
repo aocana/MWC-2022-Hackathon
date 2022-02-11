@@ -1,3 +1,4 @@
+// MWC days
 const getInfo = () => {
     console.log(
         "MWC days\n " +
@@ -6,7 +7,7 @@ const getInfo = () => {
         "2 March, Wednesday\n " +
         "3 March, Thursday"
     );
-    process.exit(1)
+    process.exit()
 }
 
 module.exports = getInfo
