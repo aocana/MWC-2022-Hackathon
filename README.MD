@@ -17,13 +17,14 @@ Clone this repository
 git clone https://github.com/ocania/MWC-2022-Hackathon
 ```
 
-Install dependencies
-```
-npm install
-```
-Execute script.sh.
+Execute script.sh. This script install dependencies and run MongoDB container.
 ```
 ./script.sh
+```
+### Stop container
+Stop MongoDB container with:
+```
+docker-compose down
 ```
 
 # Usage
