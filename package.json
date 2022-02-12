@@ -4,7 +4,7 @@
   "description": "MWC 2022 CLI",
   "main": "index.js",
   "bin": {
-    "mwc": "app/bin/mwc.js"
+    "mwc": "./app/bin/mwc.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
