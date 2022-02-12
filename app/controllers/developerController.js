@@ -16,7 +16,7 @@ const getAllDevelopers = async () => {
 
         console.log(`\n${devs.length} developers registered`)
     } catch (error) {
-        console.error(error);
+        console.log(error);
     } finally {
         process.exit();
     }
@@ -42,7 +42,7 @@ const addDeveloper = () => {
             process.exit();
         })
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
 
