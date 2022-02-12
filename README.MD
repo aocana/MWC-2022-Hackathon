@@ -26,6 +26,7 @@ I have chosen these two technologies as I have not worked with them before.
 Clone this repository
 ```
 git clone https://github.com/ocania/MWC-2022-Hackathon
+cd MWC-2022-Hackathon
 ```
 
 Execute script.sh. This script install dependencies and run MongoDB container.
