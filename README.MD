@@ -34,6 +34,7 @@ Execute script.sh. This script install dependencies and run MongoDB container.
 ```
 
 Link package (recommended). This is for run CLI only with the command 'mwc'. Probably you need to run with privileges.
+
 ![Screenshot](https://gyazo.com/829acb771bb3d3f60b8469672c684cbc.png)
 
 ### Stop container
@@ -45,6 +46,7 @@ docker-compose down
 # Usage
 Run CLI. As we can see, all the commands that we can use are displayed.
 If you have not linked the package run 'node ./app/bin/mwc.js'
+
 ![Screenshot](https://gyazo.com/a7991a02ade1e670445b96659619c258.png)
 
 ### Show MWC days
