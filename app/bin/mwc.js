@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const program = require('commander')
-const pkg = require('../../package.json')
+const program = require('commander');
+const pkg = require('../../package.json');
 const {getAllDevelopers, addDeveloper} = require('../controllers/developerController');
-const getInfo = require('../controllers/eventController')
+const getInfo = require('../controllers/eventController');
 
 program
     .name('mwc')
@@ -14,15 +14,13 @@ program
     .command('list')
     .alias('l')
     .description('List all developers')
-    .action(() =>
-        getAllDevelopers()
-    );
+    .action(() => getAllDevelopers());
 
 program
     .command('add')
     .alias('a')
     .description('Add developer to MWC')
-    .action(() => addDeveloper()  );
+    .action(() => addDeveloper());
 
 program
     .command('info')

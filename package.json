@@ -15,8 +15,5 @@
     "commander": "^9.0.0",
     "inquirer": "^8.2.0",
     "mongoose": "^6.2.1"
-  },
-  "devDependencies": {
-    "jest": "^27.5.1"
   }
 }
