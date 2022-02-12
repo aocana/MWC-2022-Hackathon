@@ -2,15 +2,15 @@
 Challenge was to create a CLI with different commands to get information about MWC.
 
 ## Stack
-- NodeJs
-- MongoDB
+- [NodeJs](https://nodejs.dev/)
+- [MongoDB](https://www.mongodb.com/)
 
 I have chosen these two technologies as I have not worked with them before.
 
 ### Packages
-- **Mongoose**: _for MongoDB_
-- **Commander**: _for commands_
-- **Inquirer**: _for commands interface_
+- **[Mongoose](https://mongoosejs.com/)**: _for MongoDB_
+- **[Commander](https://github.com/tj/commander.js/)**: _for CLI_
+- **[Inquirer](https://github.com/SBoudrias/Inquirer.js)**: _for CLI_
 
 
 ## Getting Started
